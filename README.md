@@ -5,14 +5,14 @@ Benchmarks of popular CSV parsers and formatters:
 <!-- packages -->
 | Package | Version | Published | Parse | Format 
 |---------|---------|-----------|-------|--------
-| [csv-parse](https://www.npmjs.com/package/csv-parse) | 5.5.0 | 6 days ago | Yes |  
-| [csv-parser](https://www.npmjs.com/package/csv-parser) | 3.0.0 | 3 years ago | Yes |  
-| [csv-rex](https://www.npmjs.com/package/csv-rex) | 0.7.0 | 3 months ago | Yes | Yes 
-| [csv-streamify](https://www.npmjs.com/package/csv-streamify) | 4.0.0 | 5 years ago | Yes |  
-| [csv-stringify](https://www.npmjs.com/package/csv-stringify) | 6.4.2 | 6 days ago |  | Yes 
-| [csvtojson](https://www.npmjs.com/package/csvtojson) | 2.0.10 | 4 years ago | Yes |  
-| [fast-csv](https://www.npmjs.com/package/fast-csv) | 4.3.6 | 3 years ago | Yes | Yes 
-| [papaparse](https://www.npmjs.com/package/papaparse) | 5.4.1 | 5 months ago | Yes |  
+| [csv-parse](https://www.npmjs.com/package/csv-parse) | 5.5.6 | 4 months ago | Yes |  
+| [csv-parser](https://www.npmjs.com/package/csv-parser) | 3.0.0 | 4 years ago | Yes |  
+| [csv-rex](https://www.npmjs.com/package/csv-rex) | 0.7.0 | 1 year ago | Yes | Yes 
+| [csv-streamify](https://www.npmjs.com/package/csv-streamify) | 4.0.0 | 6 years ago | Yes |  
+| [csv-stringify](https://www.npmjs.com/package/csv-stringify) | 6.5.1 | 1 month ago |  | Yes 
+| [csvtojson](https://www.npmjs.com/package/csvtojson) | 2.0.10 | 5 years ago | Yes |  
+| [fast-csv](https://www.npmjs.com/package/fast-csv) | 5.0.1 | 7 months ago | Yes | Yes 
+| [papaparse](https://www.npmjs.com/package/papaparse) | 5.4.1 | 1 year ago | Yes |  
 <!-- packages -->
 
 Your preferred CSV package missing? PRs welcome. Excluded packages in `/docs/EXCLUDED.md`.
@@ -39,13 +39,13 @@ Benchmarked on GitHub Actions. Only the fastest 5 will be visualized.
 <!-- parse quotes=true -->
 | Package | 10x10K | 100x10K | 10x100K | 100x100K | 10x1000K 
 |---------|---|---|---|---|---
-| **csv-rex** | 37ms | 284ms | 339ms | 2,864ms | 3,412ms 
-| **papaparse** | 62ms | 306ms | 605ms | 3,097ms | 5,878ms 
-| **csv-parser** | 62ms | 605ms | 634ms | 6,483ms | 6,815ms 
-| **csvtojson** | 81ms | 688ms | 787ms | 6,901ms | 7,928ms 
-| **csv-parse** | 114ms | 998ms | 1,126ms | 10,336ms | 11,676ms 
-| **csv-streamify** | 140ms | 1,325ms | 1,522ms | 14,710ms | 16,625ms 
-| **fast-csv** | 182ms | 1,621ms | 1,841ms | 17,305ms | 18,852ms 
+| **csv-rex** | 24ms | 172ms | 212ms | 1,724ms | 2,126ms 
+| **papaparse** | 43ms | 209ms | 406ms | 1,992ms | 3,918ms 
+| **csv-parser** | 38ms | 349ms | 390ms | 3,668ms | 4,116ms 
+| **csvtojson** | 56ms | 451ms | 558ms | 4,528ms | 5,611ms 
+| **csv-parse** | 77ms | 667ms | 745ms | 6,802ms | 7,873ms 
+| **csv-streamify** | 78ms | 700ms | 805ms | 7,778ms | 8,941ms 
+| **fast-csv** | 106ms | 937ms | 1,079ms | 9,743ms | 11,226ms 
 <!-- parse quotes=true -->
 
 ![Non-Quoted CSV Parser Benchmarks](https://github.com/willfarrell/csv-benchmarks/raw/main/results/parse_quotes%3Dfalse.png)
@@ -53,13 +53,13 @@ Benchmarked on GitHub Actions. Only the fastest 5 will be visualized.
 <!-- parse quotes=false -->
 | Package | 10x10K | 100x10K | 10x100K | 100x100K | 10x1000K 
 |---------|---|---|---|---|---
-| **csv-rex** | 15ms | 71ms | 132ms | 706ms | 1,289ms 
-| **csvtojson** | 48ms | 400ms | 463ms | 4,043ms | 4,666ms 
-| **csv-parser** | 52ms | 508ms | 536ms | 5,432ms | 5,733ms 
-| **papaparse** | 194ms | 84ms | 1,785ms | 809ms | 15,897ms 
-| **csv-parse** | 91ms | 811ms | 942ms | 8,580ms | 9,887ms 
-| **csv-streamify** | 120ms | 1,206ms | 1,398ms | 13,720ms | 15,767ms 
-| **fast-csv** | 149ms | 1,332ms | 1,510ms | 14,054ms | 15,875ms 
+| **csv-rex** | 9ms | 43ms | 81ms | 446ms | 797ms 
+| **csvtojson** | 33ms | 244ms | 328ms | 2,483ms | 3,291ms 
+| **csv-parser** | 32ms | 299ms | 332ms | 3,201ms | 3,587ms 
+| **papaparse** | 129ms | 59ms | 1,156ms | 552ms | 10,482ms 
+| **csv-parse** | 58ms | 518ms | 601ms | 5,525ms | 6,278ms 
+| **csv-streamify** | 68ms | 699ms | 810ms | 7,886ms | 9,105ms 
+| **fast-csv** | 88ms | 773ms | 904ms | 8,114ms | 9,464ms 
 <!-- parse quotes=false -->
 
 ### Format
@@ -69,9 +69,9 @@ Benchmarked on GitHub Actions. Only the fastest 5 will be visualized.
 <!-- format quotes=false -->
 | Package | 10x10K | 100x10K | 10x100K | 100x100K | 10x1000K 
 |---------|---|---|---|---|---
-| **csv-rex** | 33ms | 154ms | 313ms | 1,565ms | 3,221ms 
-| **csv-stringify** | 36ms | 175ms | 353ms | 1,684ms | 3,537ms 
-| **fast-csv** | 41ms | 204ms | 415ms | 2,017ms | 4,002ms 
+| **csv-rex** | 23ms | 108ms | 228ms | 1,080ms | 2,314ms 
+| **csv-stringify** | 26ms | 114ms | 247ms | 1,123ms | 2,362ms 
+| **fast-csv** | 29ms | 139ms | 291ms | 1,387ms | 2,854ms 
 <!-- format quotes=false -->
 
 ## Thanks
